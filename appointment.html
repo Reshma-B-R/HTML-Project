@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book an Appointment | BrightSmile Dental Care</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+          integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+ <style>/* ---------------- NAVBAR ---------------- */
+.nav-link {
+  position: relative;
+  color: black;
+  font-weight: 600;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: skyblue;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: skyblue !important;
+}
+
+.co {
+  color: rgb(16, 112, 149);
+}
+
+/* ---------------- PAGE BODY ---------------- */
+body {
+  background-color: #f2fcff;
+  overflow-x: hidden;
+}
+
+/* ---------------- HEADER SECTION ---------------- */
+.appointment-header {
+  background: linear-gradient(rgba(0, 86, 141, 0.6), rgba(0, 86, 141, 0.6)),
+    url("https://images.unsplash.com/photo-1606813902919-0c7a7c72b1e2?auto=format&fit=crop&w=1200&q=80")
+      center/cover;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.appointment-header h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+/* Responsive header text */
+@media (max-width: 768px) {
+  .appointment-header {
+    padding: 80px 15px;
+  }
+
+  .appointment-header h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ---------------- FORM SECTION ---------------- */
+.appointment-form {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  margin-top: -60px;
+}
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+  padding: 12px;
+}
+
+/* Responsive form padding */
+@media (max-width: 576px) {
+  .appointment-form {
+    padding: 25px;
+    margin-top: -40px;
+  }
+}
+
+/* ---------------- BUTTON ---------------- */
+.btn-appoint {
+  background-color: #05668d;
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-appoint:hover {
+  background-color: #028090;
+}
+
+/* ---------------- FOOTER ---------------- */
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 0 20px;
+}
+
+.footer h5 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.footer p,
+.footer a {
+  font-size: 14px;
+  line-height: 24px;
+  color: #ddd;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: orange;
+}
+
+.footer .social-icons a {
+  font-size: 18px;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #222;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.footer .social-icons a:hover {
+  background-color: orange;
+  color: #111;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  margin-top: 30px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+/* ---------------- FOOTER RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  .footer h5 {
+    margin-top: 30px;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-light fixed-top">
+  <div class="container-fluid">
+
+    <!-- Logo + Brand -->
+    <a class="navbar-brand d-flex align-items-center brand-wrap" href="#">
+      <img src="pro_images/clinic1_-_Copy-removebg-preview.png"
+           alt="logo"
+           width="45"
+           height="45"
+           class="me-2">
+      <span class="brand-text">
+        BrightSmile Dental Care
+    </span></a>
+
+    <!-- Toggle -->
+    <button class="navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="doctors.html">Doctors</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+        <li class="nav-item ms-lg-3">
+          <a href="appointment.html" class="btn btn-ap">
+            Make an Appointment
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+  <!-- Header Section -->
+  <section class="appointment-header">
+    <h2>Book Your Appointment</h2>
+    <p class="lead">We’re here to give you the perfect smile you deserve. Schedule your visit today!</p>
+  </section>
+
+  <!-- Appointment Form -->
+  <div class="container my-5">
+    <div class="appointment-form mx-auto col-lg-8">
+      <form>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+          </div>
+
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+
+          <div class="col-md-6">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone" required>
+          </div>
+
+          <div class="col-md-6">
+            <label for="date" class="form-label">Preferred Date</label>
+            <input type="date" class="form-control" id="date" required>
+          </div>
+
+          <div class="col-md-6">
+            <label for="time" class="form-label">Preferred Time</label>
+            <input type="time" class="form-control" id="time" required>
+          </div>
+
+          <div class="col-md-6">
+            <label for="service" class="form-label">Select Service</label>
+            <select class="form-select" id="service" required>
+              <option value="" selected disabled>Choose...</option>
+              <option>Teeth Cleaning</option>
+              <option>Root Canal</option>
+              <option>Tooth Extraction</option>
+              <option>Invisible Aligners</option>
+              <option>Smile Design</option>
+              <option>Dental Implants</option>
+            </select>
+          </div>
+
+          <div class="col-12">
+            <label for="message" class="form-label">Additional Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Write your message..."></textarea>
+          </div>
+
+          <div class="col-12 text-center mt-4">
+            <button type="submit" class="btn btn-appoint">
+              <i class="bi bi-calendar-check me-2"></i>Book Appointment
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-3">
+                <h5>About Us</h5>
+                <p>BrightSmile Dental Care is dedicated to providing world-class dental treatments with modern technology and experienced dentists, ensuring painless and comfortable dental care for all ages.</p>
+            </div>
+
+            
+            <div class="col-md-3">
+                <h5>Useful Links</h5>
+                <a href="#"><i class="bi bi-chevron-right"></i> Home</a><br>
+                <a href="#"><i class="bi bi-chevron-right"></i> About Us</a><br>
+                <a href="#"><i class="bi bi-chevron-right"></i> Services</a><br>
+                <a href="#"><i class="bi bi-chevron-right"></i> Doctors</a><br>
+                <a href="#"><i class="bi bi-chevron-right"></i> Book Appointment</a><br>
+                <a href="#"><i class="bi bi-chevron-right"></i> Contact Us</a>
+            </div>
+
+        
+            <div class="col-md-3">
+                <h5>Dental Services</h5>
+                <a href="#"><i class="bi bi-chevron-right"></i> Root Canal Treatment</a><br>
+                <a href="#"><i class="bi bi-chevron-right"></i> Dental Implants</a><br>
+                <a href="#"><i class="bi bi-chevron-right"></i> Braces & Orthodontics</a><br>
+                <a href="#"><i class="bi bi-chevron-right"></i> Teeth Whitening</a><br>
+                <a href="#"><i class="bi bi-chevron-right"></i> Cosmetic Dentistry</a><br>
+                <a href="#"><i class="bi bi-chevron-right"></i> Kids Dentistry</a>
+            </div>
+
+            
+            <div class="col-md-3">
+                <h5>Contact Us</h5>
+                <p><i class="bi bi-geo-alt-fill"></i> BrightSmile Dental Clinic,<br> Main Road, Your City, India</p>
+                <p><i class="bi bi-telephone-fill"></i> +91 9876543210</p>
+                <p><i class="bi bi-envelope-fill"></i> info@brightsmile.com</p>
+                <div class="social-icons mt-3">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            ©2019 BrightSmile Dental Care. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

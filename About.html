@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrightSmile Dental Care</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+          integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <style>
+    .nav-link {
+      position: relative;
+      color: black;
+      font-weight: 600;
+    }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: skyblue;
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+      color: skyblue !important;
+    }
+     .center{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            color:white; 
+            font-size: 4rem;
+            font-weight: 1000;
+
+            text-align: center;
+            letter-spacing: 2px;   
+            padding: 10px 20px;
+           font-family: 'Poppins', sans-serif;
+            
+        }
+    .co {
+      color: rgb(16, 112, 149);
+    }
+    .carousel-img {
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      .carousel-img {
+        height: 60vh;
+      }
+      .centered {
+        font-size: 2.5rem;
+        transform: translate(-50%, -50%);
+      }
+    } 
+
+    .footer {
+      background-color: #111;
+      color: #fff;
+      padding: 60px 0 20px;
+      position: relative;
+      font-family: Arial, sans-serif;
+    }
+    .footer h5 {
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+    .footer p,
+    .footer a {
+      font-size: 14px;
+      line-height: 24px;
+      color: #ddd;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: orange;
+      transition: 0.3s;
+    }
+    .footer .social-icons a {
+      font-size: 18px;
+      margin-right: 10px;
+      width: 40px;
+      height: 40px;
+      background-color: #222;
+      display: inline-flex;
+    
+      
+      border-radius: 50%;
+      color: #fff;
+      transition: 0.3s;
+    }
+    .footer .social-icons a:hover {
+      background-color: orange;
+      color: #111;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #333;
+      margin-top: 30px;
+      color: #ccc;
+      font-size: 14px;
+    }
+     .contact-header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url('pro_images/clinic.jpg') center/cover no-repeat;
+      height: 50vh;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    .contact-header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+   
+
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg bg-light fixed-top">
+  <div class="container-fluid">
+
+    <!-- Logo + Brand -->
+    <a class="navbar-brand d-flex align-items-center brand-wrap" href="#">
+      <img src="pro_images/clinic1_-_Copy-removebg-preview.png"
+           alt="logo"
+           width="45"
+           height="45"
+           class="me-2">
+      <span class="brand-text">
+        BrightSmile Dental Care</span>
+    </a>
+
+    <!-- Toggle -->
+    <button class="navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="doctors.html">Doctors</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+        <li class="nav-item ms-lg-3">
+          <a href="appointment.html" class="btn btn-ap">
+            Make an Appointment
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+  <section class="contact-header">
+    <h1>About Us</h1>
+    
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section py-5">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-lg-6 " ><div data-aos="fade-up">
+          <img src="pro_images/pro3.jpg" alt="Dentist treating patient" class="img-fluid about-img" style="height:500px">
+        </div></div>
+        <div class="col-lg-6 px-5">
+          <h6 class="text-uppercase fw-bold mb-3" style="color:rgb(16, 112, 149);">Welcome to BrightSmile Dental Care</h6>
+          <h2 class="fw-bold mb-4" style="color:#023047;">BrightSmile Dental Care — <br> Where Healthy Smiles Begin</h2>
+          <p class="text-muted mb-4">
+            At BrightSmile Dental Care, we combine advanced dental technology with a gentle, caring approach
+            to provide exceptional oral health care for all ages. Our mission is to help you achieve a bright,
+            confident smile through personalized and comfortable treatments.
+          </p>
+          <div class="row text-center g-3">
+            <div class="col-4">
+              <div class="info-box">
+                <i class="bi bi-emoji-smile"></i>
+                <h4>3,000</h4>
+                <p>Happy Patients</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="info-box">
+                <i class="bi bi-hospital"></i>
+                <h4>2,200</h4>
+                <p>Performed Treatments</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="info-box">
+                <i class="bi bi-calendar3"></i>
+                <h4>24</h4>
+                <p>Years of Experience</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div> 
+  </section>
+  <!-- Why Choose Us Section -->
+<section class="why-choose py-5" style="background-color:#f2fcff;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h6 class="text-uppercase mb-2" style="color: rgb(16, 112, 149);">Why Choose Us</h6>
+      <h2 class="fw-bold" style="color:#023047;">We Care for Your Smile Like Our Own</h2>
+      <p class="text-muted">At BrightSmile Dental Care, we aim to provide stress-free, reliable, and compassionate dental care.</p>
+    </div>
+
+    <div class="row text-center g-4">
+      <div class="col-md-3">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <i class="bi bi-heart-pulse fs-1 text-info mb-3"></i>
+          <h5 class="fw-bold mb-2">Comprehensive Care</h5>
+          <p class="text-muted">We offer all dental services under one roof, from preventive checkups to complex surgeries.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <i class="bi bi-people fs-1 text-info mb-3"></i>
+          <h5 class="fw-bold mb-2">Experienced Team</h5>
+          <p class="text-muted">Our certified and compassionate dentists bring years of expertise in dental excellence.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <i class="bi bi-shield-check fs-1 text-info mb-3"></i>
+          <h5 class="fw-bold mb-2">Modern Equipment</h5>
+          <p class="text-muted">We use advanced dental tools and digital diagnostics for precise, comfortable treatment.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <i class="bi bi-emoji-smile-upside-down fs-1 text-info mb-3"></i>
+          <h5 class="fw-bold mb-2">Painless Procedures</h5>
+          <p class="text-muted">Our gentle care and pain-free techniques ensure your comfort throughout every visit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Mission and Vision Section -->
+<section class="mission-vision py-5" style="background-color:#f8f9fa;">
+  <div class="container">
+    <div class="row align-items-stretch g-4">
+
+      <!-- Left Side: Two Cards -->
+      <div class="col-lg-6 d-flex flex-column justify-content-between">
+        
+        <!-- Mission Card -->
+        <div class="card mb-4 shadow-sm border-0 flex-fill" style="border-radius:15px; overflow:hidden;">
+          <img src="pro_images/mission.jpg" class="card-img-top" alt="Our Mission" style="height:220px; object-fit:cover;">
+          <div class="card-body">
+            <h5 class="card-title text-uppercase fw-bold mb-3" style="color:rgb(16, 112, 149);">
+              <i class="bi bi-bullseye me-2"></i>Our Mission
+            </h5>
+            <p class="card-text text-muted">
+              To deliver high-quality dental care with compassion and precision,  
+              helping our patients achieve brighter, healthier smiles through modern, gentle treatments.
+            </p>
+          </div>
+        </div>
+
+        <!-- Vision Card -->
+        <div class="card shadow-sm border-0 flex-fill" style="border-radius:15px; overflow:hidden;">
+          <img src="pro_images/vision.jpg" class="card-img-top" alt="Our Vision" style="height:220px; object-fit:cover;">
+          <div class="card-body">
+            <h5 class="card-title text-uppercase fw-bold mb-3" style="color:rgb(16, 112, 149);">
+              <i class="bi bi-eye me-2"></i>Our Vision
+            </h5>
+            <p class="card-text text-muted mb-0">
+              To become a leading dental clinic recognized for innovation, patient satisfaction,  
+              and our unwavering dedication to creating confident smiles for everyone.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side: Full Image -->
+      <div class="col-lg-6 p-0 " data-aos="zoom-in-right">
+        <img 
+          src="pro_images/teeeeth.jpg" 
+          alt="Dental Care" 
+          class="img-fluid w-100 h-100 rounded-end" 
+          style="object-fit:cover; border-radius:15px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>About Us</h5>
+          <p>BrightSmile Dental Care is dedicated to providing world-class dental treatments with modern technology and experienced dentists, ensuring painless and comfortable dental care for all ages.</p>
+        </div>
+        <div class="col-md-3">
+          <h5>Useful Links</h5>
+          <a href="#"><i class="bi bi-chevron-right"></i> Home</a><br>
+          <a href="#"><i class="bi bi-chevron-right"></i> About Us</a><br>
+          <a href="#"><i class="bi bi-chevron-right"></i> Services</a><br>
+          <a href="#"><i class="bi bi-chevron-right"></i> Doctors</a><br>
+          <a href="#"><i class="bi bi-chevron-right"></i> Book Appointment</a><br>
+          <a href="#"><i class="bi bi-chevron-right"></i> Contact Us</a>
+        </div>
+        <div class="col-md-3">
+          <h5>Dental Services</h5>
+          <a href="#"><i class="bi bi-chevron-right"></i> Root Canal Treatment</a><br>
+          <a href="#"><i class="bi bi-chevron-right"></i> Dental Implants</a><br>
+          <a href="#"><i class="bi bi-chevron-right"></i> Braces & Orthodontics</a><br>
+          <a href="#"><i class="bi bi-chevron-right"></i> Teeth Whitening</a><br>
+          <a href="#"><i class="bi bi-chevron-right"></i> Cosmetic Dentistry</a><br>
+          <a href="#"><i class="bi bi-chevron-right"></i> Kids Dentistry</a>
+        </div>
+        <div class="col-md-3">
+          <h5>Contact Us</h5>
+          <p><i class="bi bi-geo-alt-fill"></i> BrightSmile Dental Clinic,<br> Main Road, Your City, India</p>
+          <p><i class="bi bi-telephone-fill"></i> +91 9876543210</p>
+          <p><i class="bi bi-envelope-fill"></i> info@brightsmile.com</p>
+          <div class="social-icons mt-3">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        ©2019 BrightSmile Dental Care. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+  <script>
+  AOS.init();
+</script>
+</body>
+</html>
